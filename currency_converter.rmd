@@ -1,0 +1,31 @@
+---
+title: "Currency Converter"
+author: "MADAN K C "
+date: "4/13/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Converting currency from dollar to nepali
+```{r}
+Dollar<-rpois(20,60)
+df1<-data.frame(Dollar)
+nepali <- function(Dollar){
+  df1$Rupees <- df1$Dollar * 120 #the value of 1 dollar is equal to 120 nepali rupees
+  return(df1)
+}
+nepali(df1)
+```
+Converting rupees into dollar
+```{r}
+dollar_converter <- function(rupees) {
+  dollar <- rupees / 120
+  return(dollar)
+}
+dollar_converter(12000)
+```
+
+
